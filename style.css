@@ -4,19 +4,19 @@
 
 @font-face {
   font-family: "Orbitron";
-  src: url("assets/fonts/Orbitron.ttf") format("truetype");
+  src: url("assets/fonts/Orbitron.ttf?v=3") format("truetype");
   font-weight: 400 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Orbitron Heavy";
-  src: url("assets/fonts/Orbitron-ExtraBold.ttf") format("truetype");
+  src: url("assets/fonts/Orbitron-ExtraBold.ttf?v=3") format("truetype");
   font-weight: 800;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("assets/fonts/Inter.ttf") format("truetype");
+  src: url("assets/fonts/Inter.ttf?v=3") format("truetype");
   font-weight: 300 700;
   font-display: swap;
 }
