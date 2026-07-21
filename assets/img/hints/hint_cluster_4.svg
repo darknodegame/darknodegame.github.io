@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="128" height="128">
+  <!-- 4 mine cells forming a T-tetromino, INK fill, 0.3 unit gaps between
+       so the "shared edge" lines are subtly visible. -->
+  <rect x="4.5"  y="4"   width="5.2" height="5.2" rx="0.6" fill="#f0f4ff"/>
+  <rect x="10.0" y="4"   width="5.2" height="5.2" rx="0.6" fill="#f0f4ff"/>
+  <rect x="15.5" y="4"   width="5.2" height="5.2" rx="0.6" fill="#f0f4ff"/>
+  <rect x="10.0" y="9.5" width="5.2" height="5.2" rx="0.6" fill="#f0f4ff"/>
+  <!-- Hint cell — ACCENT_2 dot OUTSIDE the cluster, directly SOUTH of the
+       T-stem (cardinal, not diagonal — matches the 4-orth mechanic). -->
+  <circle cx="12.6" cy="18" r="2.4" fill="#ff2d92"/>
+</svg>

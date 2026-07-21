@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="128" height="128">
+  <!-- Eye outline (almond), centered. INK #f0f4ff. -->
+  <path d="M3 12 Q12 4 21 12 Q12 20 3 12 Z" fill="none" stroke="#f0f4ff" stroke-width="1.5"/>
+  <!-- Pupil — ACCENT_2 #ff2d92. -->
+  <circle cx="12" cy="12" r="2.6" fill="#ff2d92"/>
+  <!-- 8 gaze-dots on a halo of radius ~10 (smaller than A's corner dots and pulled inward). -->
+  <circle cx="12"   cy="2"    r="0.8" fill="#f0f4ff"/>  <!-- N  -->
+  <circle cx="19.07" cy="4.93" r="0.8" fill="#f0f4ff"/>  <!-- NE -->
+  <circle cx="22"   cy="12"   r="0.8" fill="#f0f4ff"/>  <!-- E  -->
+  <circle cx="19.07" cy="19.07" r="0.8" fill="#f0f4ff"/> <!-- SE -->
+  <circle cx="12"   cy="22"   r="0.8" fill="#f0f4ff"/>  <!-- S  -->
+  <circle cx="4.93" cy="19.07" r="0.8" fill="#f0f4ff"/>  <!-- SW -->
+  <circle cx="2"    cy="12"   r="0.8" fill="#f0f4ff"/>  <!-- W  -->
+  <circle cx="4.93" cy="4.93" r="0.8" fill="#f0f4ff"/>   <!-- NW -->
+</svg>

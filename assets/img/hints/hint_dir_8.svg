@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="128" height="128">
+  <!-- 8 sectors filled in saturated gold #ffc428, outlined in INK #f0f4ff. -->
+  <!-- N sector. -->
+  <path d="M 15.64 3.22 A 9.5 9.5 0 0 0 8.36 3.22 L 10.47 8.30 A 4 4 0 0 1 13.53 8.30 Z"
+        fill="#ffc428" stroke="#f0f4ff" stroke-width="0.9" stroke-linejoin="round"/>
+  <!-- NE sector. -->
+  <path d="M 20.78 8.36 A 9.5 9.5 0 0 0 15.64 3.22 L 13.53 8.30 A 4 4 0 0 1 15.70 10.47 Z"
+        fill="#ffc428" stroke="#f0f4ff" stroke-width="0.9" stroke-linejoin="round"/>
+  <!-- E sector. -->
+  <path d="M 20.78 15.64 A 9.5 9.5 0 0 0 20.78 8.36 L 15.70 10.47 A 4 4 0 0 1 15.70 13.53 Z"
+        fill="#ffc428" stroke="#f0f4ff" stroke-width="0.9" stroke-linejoin="round"/>
+  <!-- SE sector. -->
+  <path d="M 15.64 20.78 A 9.5 9.5 0 0 0 20.78 15.64 L 15.70 13.53 A 4 4 0 0 1 13.53 15.70 Z"
+        fill="#ffc428" stroke="#f0f4ff" stroke-width="0.9" stroke-linejoin="round"/>
+  <!-- S sector. -->
+  <path d="M 8.36 20.78 A 9.5 9.5 0 0 0 15.64 20.78 L 13.53 15.70 A 4 4 0 0 1 10.47 15.70 Z"
+        fill="#ffc428" stroke="#f0f4ff" stroke-width="0.9" stroke-linejoin="round"/>
+  <!-- SW sector. -->
+  <path d="M 3.22 15.64 A 9.5 9.5 0 0 0 8.36 20.78 L 10.47 15.70 A 4 4 0 0 1 8.30 13.53 Z"
+        fill="#ffc428" stroke="#f0f4ff" stroke-width="0.9" stroke-linejoin="round"/>
+  <!-- W sector. -->
+  <path d="M 3.22 8.36 A 9.5 9.5 0 0 0 3.22 15.64 L 8.30 13.53 A 4 4 0 0 1 8.30 10.47 Z"
+        fill="#ffc428" stroke="#f0f4ff" stroke-width="0.9" stroke-linejoin="round"/>
+  <!-- NW sector. -->
+  <path d="M 8.36 3.22 A 9.5 9.5 0 0 0 3.22 8.36 L 8.30 10.47 A 4 4 0 0 1 10.47 8.30 Z"
+        fill="#ffc428" stroke="#f0f4ff" stroke-width="0.9" stroke-linejoin="round"/>
+  <!-- Center focal dot — ACCENT_2 #ff2d92. -->
+  <circle cx="12" cy="12" r="2.6" fill="#ff2d92"/>
+</svg>

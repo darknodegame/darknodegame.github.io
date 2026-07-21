@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="128" height="128">
+  <!-- Eye outline (almond), centered. INK #f0f4ff. -->
+  <path d="M3 12 Q12 4 21 12 Q12 20 3 12 Z" fill="none" stroke="#f0f4ff" stroke-width="1.5"/>
+  <!-- Pupil — ACCENT_2 #ff2d92. -->
+  <circle cx="12" cy="12" r="2.6" fill="#ff2d92"/>
+  <!-- 4 cardinal gaze-ticks at the cell edges (N/S/E/W only — no diagonals). -->
+  <line x1="12"  y1="0.5" x2="12"  y2="3"    stroke="#f0f4ff" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="12"  y1="21"  x2="12"  y2="23.5" stroke="#f0f4ff" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="0.5" y1="12"  x2="3"   y2="12"   stroke="#f0f4ff" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="21"  y1="12"  x2="23.5" y2="12"  stroke="#f0f4ff" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

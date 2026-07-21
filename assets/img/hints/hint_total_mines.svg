@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="128" height="128">
+  <!-- hex frame (bilateral symmetry: unchanged by mirror) -->
+  <path d="M12 1 L22 6.5 L22 17.5 L12 23 L2 17.5 L2 6.5 Z"
+        stroke="#f0f4ff" stroke-width="1.4" fill="none"
+        stroke-linejoin="round"/>
+  <!-- Sigma — mirrored, vertex on right; narrower to fit inside hex -->
+  <path d="M16 7 L7 7 L16 12 L7 17 L16 17"
+        stroke="#f0f4ff" stroke-width="2.0" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Play — Dark Node: Initiation</title>
+  <meta name="description" content="How to play Dark Node: Initiation — the objective, tap-to-reveal and long-press-to-mark controls, and the full line-of-sight hint reference with real in-game examples." />
+  <meta name="robots" content="all" />
+  <link rel="canonical" href="https://darknodegame.com/rules.html" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg?v=3" />
+  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="rules.css?v=4" />
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+
+  <header class="hero" style="padding-bottom:0;">
+    <div class="hero__brand">
+      <a href="index.html" style="text-decoration:none;">
+        <h1 class="wordmark"><span class="dark">DARK</span><span class="node">NODE</span></h1>
+      </a>
+      <p class="wordmark__sub">INITIATION</p>
+    </div>
+  </header>
+
+  <main class="rules">
+    <a class="rules__back" href="index.html">&larr; Back to home</a>
+
+    <h1>How to Play</h1>
+    <p class="rules__intro">A sparse, <em>line-of-sight</em> take on the classic
+    reveal-the-safe-cells puzzle. The hazards are <strong>dark nodes</strong> you
+    locate and neutralise. Every board — a <em>Vector</em> — is verified solvable by
+    pure deduction: you never have to guess.</p>
+
+    <!-- ============ GOAL ============ -->
+    <h2>The goal</h2>
+    <p>A board is a square grid, up to <strong>12×12</strong>. Every cell is hidden.
+    Somewhere among them are <strong class="mag">dark nodes</strong> — everything else
+    is safe. Some cells are <strong>walls</strong>: inert blocks that are never nodes
+    and that <strong>stop line-of-sight scans</strong>.</p>
+    <p><strong>Reveal every safe cell and mark every dark node.</strong> When both are
+    true, the Vector is <strong class="accent">SECURED</strong> — you win.</p>
+
+    <!-- ============ CONTROLS ============ -->
+    <h2>The two actions</h2>
+    <div class="rules__cards">
+      <div class="card">
+        <div class="card__head">
+          <span class="card__glyph"><img src="assets/img/hints/hint_adjacent.svg" alt="" /></span>
+          <h3>Tap — reveal</h3>
+        </div>
+        <p>Open a hidden cell. A safe cell shows a <strong>hint</strong> (a number
+        telling you about nearby nodes), or opens blank.</p>
+        <p><strong class="mag">Tap a dark node and it triggers — you lose the
+        Vector.</strong> Read the clues first.</p>
+      </div>
+      <div class="card">
+        <div class="card__head">
+          <span class="card__glyph"><img src="assets/img/node_mark.svg" alt="" /></span>
+          <h3>Long-press — mark</h3>
+        </div>
+        <p>Flag a hidden cell you believe is a node. Marking is reversible and never
+        reveals the cell.</p>
+        <p>Mark the nodes you've deduced, then reveal the rest to secure the Vector.</p>
+      </div>
+    </div>
+
+    <!-- ============ MECHANICS ============ -->
+    <h2>Good to know</h2>
+    <div class="rules__cards">
+      <div class="card">
+        <div class="card__head"><h3>Cascade</h3></div>
+        <p>Reveal a cell with <strong>zero nodes around it</strong> and the whole
+        connected blank region opens in one tap — the classic flood.</p>
+      </div>
+      <div class="card">
+        <div class="card__head"><h3>Marks must be exact</h3></div>
+        <p>A mark on a <em>safe</em> cell blocks the win until you clear it. The Vector
+        secures only when every real node is marked and nothing else is.</p>
+      </div>
+      <div class="card">
+        <div class="card__head"><h3>Satisfied hints dim</h3></div>
+        <p>Once every node a hint counts has been marked, the hint <strong>dims</strong>
+        on its own — so the clues still worth reading stay bright.</p>
+      </div>
+      <div class="card">
+        <div class="card__head"><h3>No guessing</h3></div>
+        <p>Every Vector is solvable by deduction alone. Stuck means a clue is waiting
+        to be read — the <strong class="accent">Cue</strong> tool rings the exact
+        hints that force your next move.</p>
+      </div>
+      <div class="card">
+        <div class="card__head"><h3>No clock</h3></div>
+        <p>Nothing is racing you. There's no timer — take the time to read every clue
+        before you tap.</p>
+      </div>
+      <div class="card">
+        <div class="card__head"><h3>Losing costs coherence</h3></div>
+        <p>Trigger a node and you lose more than the Vector — it drains your
+        <strong>coherence</strong>, the sliver of self you jack in with. A clean win
+        costs none, and it regenerates over time, so keep clearing and you can run as
+        long as you like.</p>
+      </div>
+    </div>
+
+    <!-- ============ READING HINTS ============ -->
+    <h2>Reading the hints</h2>
+    <p>Every revealed clue is one of several kinds. They differ in
+    <strong>what they count</strong> and <strong>which cells they look at</strong>.
+    Two scan shapes recur:</p>
+    <p><strong class="accent">Neighbours</strong> — the cells directly touching the
+    clue (8 = all around; 4 = only N/E/S/W).<br />
+    <strong class="accent">Line-of-sight beams</strong> — straight rays fired outward
+    to the board edge or the first wall. <strong>Dark nodes do not block a beam</strong>
+    — it scans straight through them, counting each one (think x-ray). A
+    <strong>wall</strong> stops the beam cold.</p>
+    <p><strong>Tap a revealed hint</strong> to open its description; <strong>tap it
+    again</strong> to light up the exact cells it scans across the board.</p>
+
+    <figure class="rays-shot">
+      <img src="assets/img/hints/hint_rays.png?v=1" alt="A revealed Line of Sight hint with its scan rays lit: beams run through empty cells to the board edge, pass through a marked node, and stop at a wall, with the hint description below the board" loading="lazy" />
+      <figcaption>Rays lit — they run through empty cells to the edge, pass straight
+      through a marked node, and stop at a wall.</figcaption>
+    </figure>
+
+    <div class="legend">
+      <span class="legend__item"><span class="swatch swatch--hint"></span> The revealed hint (glyph + number)</span>
+      <span class="legend__item"><span class="swatch"><img class="swatch__img" src="assets/img/node_mark.svg" alt="" /></span> A marked dark node</span>
+      <span class="legend__item"><span class="swatch swatch--wall"></span> Wall (blocks line-of-sight beams)</span>
+    </div>
+    <p class="legend__foot">In each example below the relevant nodes are shown
+    <strong class="mag">marked</strong> so you can see them — in real play they stay
+    hidden until you find them.</p>
+
+    <!-- ============ HINT REFERENCE ============ -->
+    <h2>Hint reference</h2>
+    <div class="hints" id="hints"></div>
+
+    <!-- ============ TOOLKIT ============ -->
+    <h2>The toolkit</h2>
+    <div class="rules__cards">
+      <div class="card">
+        <div class="card__head">
+          <span class="card__glyph"><img src="assets/img/tools/item_surge_guard.svg" alt="" /></span>
+          <h3>Surge Guard</h3>
+        </div>
+        <p>Arms a few taps: a tap that <em>would</em> trip a node marks it instead of
+        detonating.</p>
+      </div>
+      <div class="card">
+        <div class="card__head">
+          <span class="card__glyph"><img src="assets/img/tools/item_cue.svg" alt="" /></span>
+          <h3>Cue</h3>
+        </div>
+        <p>Rings the revealed hints that force a guaranteed next move. No forced move?
+        It honestly says so and costs nothing.</p>
+      </div>
+      <div class="card">
+        <div class="card__head">
+          <span class="card__glyph"><img src="assets/img/tools/item_threat_map.svg" alt="" /></span>
+          <h3>Threat Map</h3>
+        </div>
+        <p>A quick heat wash estimating each closed cell's node likelihood from what's
+        visible — a heuristic, not a proof.</p>
+      </div>
+    </div>
+
+    <div class="cta" style="margin-top:3rem;">
+      <a class="cta__btn cta__btn--primary" href="https://play.google.com/store/apps/details?id=com.darknode.initiation" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="wordmark wordmark--mini"><span class="dark">DARK</span><span class="node">NODE</span></p>
+    <p class="site-footer__copy">© 2026 Dark Node. A line-of-sight puzzle prototype.</p>
+    <p class="site-footer__copy"><a href="rules.html">How to Play</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a> · <a href="delete-data.html">Delete My Data</a></p>
+  </footer>
+
+  <script>
+  // Each hint card: type icon + name + description + a REAL in-game field capture
+  // (tools/hint_shot.gd). 4-way variants precede their 8-way siblings. Descriptions
+  // are the game's own hint-panel copy; the note explains what the example shows.
+  const HINTS = [
+    { img:'hint_b', icon:'hint_orthogonal', name:'Orthogonal',
+      desc:'Counts dark nodes in the 4 orthogonal neighbours — no diagonals.',
+      note:'Two nodes touch it edge-on; a diagonal one would not count.' },
+
+    { img:'hint_a', icon:'hint_adjacent', name:'Adjacency',
+      desc:'Counts dark nodes in the 8 surrounding cells, including diagonals — the good old Minesweeper number.',
+      note:'Three nodes touch this cell — one of them diagonally.' },
+
+    { img:'hint_d', icon:'hint_los_4', name:'Line of Sight (4-way)',
+      desc:'Counts dark nodes along the 4 orthogonal sight lines — walls block the view.',
+      note:'Two nodes stacked on the north beam both count — nodes don’t block.' },
+
+    { img:'hint_c', icon:'hint_los_8', name:'Line of Sight',
+      desc:'Counts dark nodes along all 8 sight lines — walls block the view, nodes do not.',
+      note:'Four nodes on the beams → 4. The node behind the wall isn’t seen, so it doesn’t count.' },
+
+    { img:'hint_f', icon:'hint_dir_4', name:'Directions (4-way)',
+      desc:'Counts the 4 cardinal directions that hold at least one node — walls block the view.',
+      note:'North holds two nodes but still counts as one direction → 2.' },
+
+    { img:'hint_g', icon:'hint_dir_8', name:'Directions (8-way)',
+      desc:'Counts the 8 directions that hold at least one node — walls block the view.',
+      note:'Nodes lie along three of the eight sight lines → 3.' },
+
+    { img:'hint_h', icon:'hint_iso_4', name:'Isolated (4-way)',
+      desc:'Counts nodes on the 4 cardinal rays with no other node touching them.',
+      note:'The touching pair is not isolated; only the lone node counts → 1.' },
+
+    { img:'hint_i', icon:'hint_iso_8', name:'Isolated (8-way)',
+      desc:'Counts nodes on all 8 rays with no other node touching them.',
+      note:'Two lone nodes are isolated; the touching pair is not → 2.' },
+
+    { img:'hint_j', icon:'hint_longest_run_4', name:'Longest Run',
+      desc:'The length of the longest unbroken run of nodes on any one cardinal beam.',
+      note:'Three nodes in a row down the south beam → 3.' },
+
+    { img:'hint_k', icon:'hint_group_count_4', name:'Group Count',
+      desc:'The number of separate node-runs added up across the 4 cardinal beams — a run can be one node or many.',
+      note:'South splits into two runs; east is one run of two → 3 groups.' },
+
+    { img:'hint_l', icon:'hint_total_mines', name:'Nodes Remaining',
+      desc:'The board’s total dark-node count — the classic end-game closer. Tap it and the readout tracks how many are still unmarked.',
+      note:'Board holds 4; with 2 marked, the readout shows 2 still to find.' },
+  ];
+
+  // Teaser only — not yet released, shown as an icon + COMING SOON (no example).
+  const SOON = [
+    { icon:'hint_cluster_4', name:'Cluster Count',
+      desc:'Adds up the sizes of the connected node-clusters this cell touches.' },
+  ];
+
+  const host = document.getElementById('hints');
+  HINTS.forEach(spec => {
+    const card = document.createElement('article');
+    card.className = 'hint-card';
+
+    const top = document.createElement('div');
+    top.className = 'hint-card__top';
+    const icon = document.createElement('span');
+    icon.className = 'hint-card__icon';
+    const iconImg = document.createElement('img');
+    iconImg.src = 'assets/img/hints/' + spec.icon + '.svg'; iconImg.alt = '';
+    icon.appendChild(iconImg);
+    const name = document.createElement('h3');
+    name.className = 'hint-card__name'; name.textContent = spec.name;
+    top.appendChild(icon); top.appendChild(name);
+
+    const desc = document.createElement('p');
+    desc.className = 'hint-card__desc'; desc.textContent = spec.desc;
+
+    const shot = document.createElement('div');
+    shot.className = 'hint-card__shot';
+    const shotImg = document.createElement('img');
+    shotImg.src = 'assets/img/hints/' + spec.img + '.png?v=3';
+    shotImg.alt = spec.name + ' hint example';
+    shotImg.loading = 'lazy';
+    shot.appendChild(shotImg);
+
+    const note = document.createElement('p');
+    note.className = 'hint-card__note'; note.textContent = spec.note;
+
+    card.appendChild(top);
+    card.appendChild(desc);
+    card.appendChild(shot);
+    card.appendChild(note);
+    host.appendChild(card);
+  });
+
+  SOON.forEach(spec => {
+    const card = document.createElement('article');
+    card.className = 'hint-card hint-card--soon';
+
+    const top = document.createElement('div');
+    top.className = 'hint-card__top';
+    const icon = document.createElement('span');
+    icon.className = 'hint-card__icon';
+    const iconImg = document.createElement('img');
+    iconImg.src = 'assets/img/hints/' + spec.icon + '.svg'; iconImg.alt = '';
+    icon.appendChild(iconImg);
+    const name = document.createElement('h3');
+    name.className = 'hint-card__name'; name.textContent = spec.name;
+    const badge = document.createElement('span');
+    badge.className = 'hint-card__soon-badge'; badge.textContent = 'COMING SOON';
+    top.appendChild(icon); top.appendChild(name); top.appendChild(badge);
+
+    const desc = document.createElement('p');
+    desc.className = 'hint-card__desc'; desc.textContent = spec.desc;
+
+    card.appendChild(top);
+    card.appendChild(desc);
+    host.appendChild(card);
+  });
+  </script>
+</body>
+</html>
