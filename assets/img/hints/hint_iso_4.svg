@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="128" height="128">
+  <!-- Left heart-half, INK polygon. Drifting slightly left of centre. -->
+  <path d="M11,7 L7,4 L3,8 L11,20 Z" fill="#f0f4ff"/>
+  <!-- Right heart-half, INK polygon. Drifting slightly right; 2px gap. -->
+  <path d="M13,7 L17,4 L21,8 L13,20 Z" fill="#f0f4ff"/>
+  <!-- Magenta focal pin in the gap — the wound. -->
+  <circle cx="12" cy="11" r="1.4" fill="#ff2d92"/>
+  <!-- 4 cardinal ticks at cell edges. -->
+  <line x1="12"  y1="0.5" x2="12"  y2="2.5"  stroke="#f0f4ff" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="12"  y1="21.5" x2="12" y2="23.5" stroke="#f0f4ff" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="0.5" y1="12"  x2="2.5" y2="12"   stroke="#f0f4ff" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="21.5" y1="12" x2="23.5" y2="12"  stroke="#f0f4ff" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

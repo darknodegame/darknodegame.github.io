@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="128" height="128">
+  <!-- node hexagon shell -->
+  <path d="M12 7 L16 9.3 L16 13.7 L12 16 L8 13.7 L8 9.3 Z"
+        fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+  <!-- shield/brace arc hugging the node -->
+  <path d="M5 5.5 L12 3 L19 5.5 L19 11.5 Q19 18 12 21.5 Q5 18 5 11.5 Z"
+        fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" opacity="0.9"/>
+</svg>
