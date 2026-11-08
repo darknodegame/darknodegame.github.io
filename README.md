@@ -23,6 +23,7 @@ Match-3 RPG for Android, package `com.darknode.bosslock`.
 
 - `bosslock/privacy.html` — https://darknodegame.com/bosslock/privacy.html
 - `bosslock/delete-data.html` — https://darknodegame.com/bosslock/delete-data.html
+- `bosslock/terms.html` — https://darknodegame.com/bosslock/terms.html
 - `bosslock/style.css` — neutral light styling for this folder only
 
 ## Shared
