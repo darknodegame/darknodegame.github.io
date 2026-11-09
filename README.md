@@ -21,11 +21,11 @@ Line-of-sight puzzle for Android.
 
 Match-3 RPG for Android, package `com.darknode.bosslock`.
 
-- `bosslock/index.html` — https://darknodegame.com/bosslock/ (stub: title and legal links)
+- `bosslock/index.html` — https://darknodegame.com/bosslock/ (landing page, `landing.css`, `img/`, `fonts/`)
 - `bosslock/privacy.html` — https://darknodegame.com/bosslock/privacy.html
 - `bosslock/delete-data.html` — https://darknodegame.com/bosslock/delete-data.html
 - `bosslock/terms.html` — https://darknodegame.com/bosslock/terms.html
-- `bosslock/style.css` — neutral light styling for this folder only
+- `bosslock/style.css` — neutral light styling for the legal pages
 
 ## Shared
 
