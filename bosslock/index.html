@@ -4,22 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boss Lock: Pirate Match 3 RPG</title>
-  <meta name="description" content="Boss Lock: Pirate Match 3 RPG, a mobile match-3 game for Android." />
+  <meta name="description" content="A match-3 RPG with animal pirates for Android. Crack each boss's secret combo and one-shot it. Free on Google Play." />
   <meta name="robots" content="all" />
+  <meta name="theme-color" content="#12393f" />
   <link rel="canonical" href="https://darknodegame.com/bosslock/" />
-  <link rel="icon" href="data:," />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="img/icon-192.png" />
+  <link rel="apple-touch-icon" href="img/icon-192.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Boss Lock" />
+  <meta property="og:title" content="Boss Lock: Pirate Match 3 RPG" />
+  <meta property="og:description" content="Crack each boss's secret combo and one-shot it. Free on Google Play." />
+  <meta property="og:url" content="https://darknodegame.com/bosslock/" />
+  <meta property="og:image" content="https://darknodegame.com/bosslock/img/og.jpg" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:image:alt" content="Boss Lock: animal pirates and a match-3 board" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preload" href="fonts/LilitaOne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="landing.css" />
 </head>
 <body>
   <main>
-    <h1 style="margin-top:2.5rem;">Boss Lock: Pirate Match 3 RPG</h1>
-    <p>A match-3 RPG for Android. Coming soon.</p>
-    <ul>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="terms.html">Terms &amp; Conditions</a></li>
-      <li><a href="delete-data.html">Delete My Data</a></li>
-      <li>Contact: <a href="mailto:darknodegame@gmail.com">darknodegame@gmail.com</a></li>
+    <header class="hero">
+      <img class="icon" src="img/icon-256.webp" width="128" height="128" alt="Boss Lock app icon: a pirate cat" />
+      <h1>Boss Lock<span>Pirate Match 3 RPG</span></h1>
+      <p class="hook">Every boss hides a secret combo. Crack it and one-shot the boss.</p>
+      <a class="badge" href="https://play.google.com/store/apps/details?id=com.darknode.bosslock&amp;utm_source=website&amp;utm_medium=landing">
+        <img src="img/google-play-badge.png" width="646" height="250" alt="Get it on Google Play" />
+      </a>
+    </header>
+
+    <ul class="points">
+      <li><strong>Match-3 battles.</strong> Swap gems of fire, water, nature, light and dark to hit pirate animals.</li>
+      <li><strong>Losing is progress.</strong> Every lost boss fight shows you one more slot of its combo.</li>
+      <li><strong>Loot chests.</strong> Beat a boss, open its chest, and wear better weapons and armour.</li>
     </ul>
+
+    <section class="shots" aria-label="Screenshots">
+      <img src="img/shot-01-crit.webp" width="540" height="960" loading="lazy" alt="A boss fight: matching the secret combo lands a crit" />
+      <img src="img/shot-02-lose.webp" width="540" height="960" loading="lazy" alt="After a loss, a new combo slot is found" />
+      <img src="img/shot-03-oneshot.webp" width="540" height="960" loading="lazy" alt="The full combo one-shots the boss" />
+      <img src="img/shot-04-loot.webp" width="540" height="960" loading="lazy" alt="A boss chest with a legendary armour" />
+    </section>
+
+    <p class="cta">
+      Free, no energy system: play as long as you like.
+      <a class="badge" href="https://play.google.com/store/apps/details?id=com.darknode.bosslock&amp;utm_source=website&amp;utm_medium=landing">
+        <img src="img/google-play-badge.png" width="646" height="250" loading="lazy" alt="Get it on Google Play" />
+      </a>
+    </p>
   </main>
+
+  <footer>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="delete-data.html">Delete My Data</a>
+      <a href="mailto:darknodegame@gmail.com">darknodegame@gmail.com</a>
+    </nav>
+    <p class="legal">Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
 </body>
 </html>
