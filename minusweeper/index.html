@@ -173,10 +173,10 @@
 <script>
 (() => {
   const LEVELS = {
-    // Reversed from the classic sizes: the classic mine count is the number of free cells here.
-    beginner: { w: 9, h: 9, free: 10 },
-    intermediate: { w: 16, h: 16, free: 40 },
-    expert: { w: 30, h: 16, free: 99 },
+    // Standard levels are half free, half mines (odd boards get the extra mine).
+    beginner: { w: 9, h: 9, free: 40 },
+    intermediate: { w: 16, h: 16, free: 128 },
+    expert: { w: 30, h: 16, free: 240 },
   };
   const MINE_SVG = '<svg viewBox="0 0 16 16"><g stroke="#000" stroke-width="1.6"><line x1="8" y1="1" x2="8" y2="15"/><line x1="1" y1="8" x2="15" y2="8"/><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></g><circle cx="8" cy="8" r="4.6" fill="#000"/><rect x="5.6" y="5.6" width="2" height="2" fill="#fff"/></svg>';
 
