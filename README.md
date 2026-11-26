@@ -27,6 +27,13 @@ Match-3 RPG for Android, package `com.darknode.bosslock`.
 - `bosslock/terms.html` — https://darknodegame.com/bosslock/terms.html
 - `bosslock/style.css` — neutral light styling for the legal pages
 
+## Minusweeper (`minusweeper/`)
+
+Browser game: minesweeper where you may click only the mines. Copied from the
+`minusweeper` game repo (`index.html`, `game.js`); edit there, then copy over.
+
+- `minusweeper/index.html` — https://darknodegame.com/minusweeper/
+
 ## Shared
 
 - `app-ads.txt` — AdMob publisher line for the whole domain
