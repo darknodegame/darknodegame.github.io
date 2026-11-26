@@ -29,8 +29,9 @@ Match-3 RPG for Android, package `com.darknode.bosslock`.
 
 ## Minusweeper (`minusweeper/`)
 
-Browser game: minesweeper where you may click only the mines. Copied from the
-`minusweeper` game repo (`index.html`, `game.js`); edit there, then copy over.
+Browser game: minesweeper where you may click only the mines. Generated from
+the `minusweeper` game repo: edit there and run its `./deploy.sh`, which copies
+`index.html` and `game.js` here (with a `?v=` content hash on `game.js`) and pushes.
 
 - `minusweeper/index.html` — https://darknodegame.com/minusweeper/
 
