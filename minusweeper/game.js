@@ -113,7 +113,16 @@
     return { result: 'defused', opened, changed };
   }
 
-  const api = { createGame, click, count, neighbors, mulberry32 };
+  // Custom size limits: classic 9..30 x 9..24; at least the 3x3 opening free and one mine to win.
+  function customLevel(w, h, free) {
+    const clamp = (v, lo, hi, d) => (Number.isFinite(+v) && v !== '' && v != null ? Math.min(hi, Math.max(lo, Math.round(+v))) : d);
+    w = clamp(w, 9, 30, 9);
+    h = clamp(h, 9, 24, 9);
+    free = clamp(free, 9, w * h - 1, 10);
+    return { w, h, free };
+  }
+
+  const api = { createGame, click, count, neighbors, mulberry32, customLevel };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.Minus = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

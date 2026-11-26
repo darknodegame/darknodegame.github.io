@@ -89,6 +89,24 @@
     margin-top: 4px; padding: 2px 6px; display: flex; justify-content: space-between; gap: 12px;
   }
   .status span { flex: 1; padding: 1px 4px; }
+  .modal-bg {
+    position: fixed; inset: 0; background: rgba(0,0,0,.25); display: none; align-items: center; justify-content: center; z-index: 10;
+  }
+  .modal-bg.open { display: flex; }
+  .modal .body { display: flex; gap: 16px; padding: 14px 12px 12px; align-items: flex-start; }
+  .modal .fields { display: grid; grid-template-columns: auto 64px; gap: 8px 10px; align-items: center; }
+  .modal input {
+    font: inherit; width: 64px; padding: 2px 4px; background: #fff;
+    border: 2px solid; border-color: var(--lo) var(--hi) var(--hi) var(--lo); user-select: text;
+  }
+  .modal .buttons { display: flex; flex-direction: column; gap: 8px; }
+  .btn {
+    font: inherit; min-width: 72px; padding: 4px 10px; background: var(--face); cursor: pointer;
+    border: 2px solid; border-color: var(--hi) var(--dark) var(--dark) var(--hi);
+    box-shadow: inset -1px -1px var(--lo);
+  }
+  .btn:active { border-color: var(--dark) var(--hi) var(--hi) var(--dark); box-shadow: inset 1px 1px var(--lo); }
+  .modal .hint { grid-column: 1 / -1; color: #444; font-size: 11px; max-width: 170px; }
   .help {
     max-width: 460px; margin-top: 18px; background: #ffffe1; border: 1px solid #000; padding: 10px 14px;
     line-height: 1.45; box-shadow: 3px 3px 0 rgba(0,0,0,.35);
@@ -110,6 +128,7 @@
       <div data-level="beginner">Beginner</div>
       <div data-level="intermediate">Intermediate</div>
       <div data-level="expert">Expert</div>
+      <div data-act="custom" data-level="custom">Custom…</div>
     </div>
   </div>
   <div class="game">
@@ -121,6 +140,24 @@
     <div class="sunken board-wrap"><div class="board" id="board"></div></div>
   </div>
   <div class="status sunken"><span id="msg">Click anywhere to start.</span><span id="best" style="text-align:right"></span></div>
+</div>
+
+<div class="modal-bg" id="customBg">
+  <form class="window modal" id="customForm" autocomplete="off">
+    <div class="titlebar"><span>Custom Field</span><span id="customX" style="cursor:pointer">✕</span></div>
+    <div class="body">
+      <div class="fields">
+        <label for="cH">Height:</label><input id="cH" type="number" inputmode="numeric" min="9" max="24">
+        <label for="cW">Width:</label><input id="cW" type="number" inputmode="numeric" min="9" max="30">
+        <label for="cF">Free cells:</label><input id="cF" type="number" inputmode="numeric" min="9">
+        <div class="hint" id="cHint"></div>
+      </div>
+      <div class="buttons">
+        <button class="btn" type="submit">OK</button>
+        <button class="btn" type="button" id="customCancel">Cancel</button>
+      </div>
+    </div>
+  </form>
 </div>
 
 <div class="help" id="help">
@@ -146,6 +183,10 @@
   const $ = (id) => document.getElementById(id);
   const boardEl = $('board'), faceEl = $('face'), minesEl = $('mines'), timerEl = $('timer'), msgEl = $('msg');
 
+  LEVELS.custom = (() => {
+    try { const c = JSON.parse(load('custom')); return Minus.customLevel(c.w, c.h, c.free); }
+    catch { return Minus.customLevel(16, 16, 60); }
+  })();
   let level = load('level') || 'beginner';
   if (!LEVELS[level]) level = 'beginner';
   let g, cells, t0 = 0, timerId = 0, pressed = -1;
@@ -178,8 +219,13 @@
 
   function updateMines() { minesEl.textContent = lcd(g.mines - g.defusedCount); }
 
+  function bestKey() {
+    const L = LEVELS[level];
+    return level === 'custom' ? `best.custom.${L.w}x${L.h}x${L.free}` : 'best.' + level;
+  }
+
   function showBest() {
-    const b = load('best.' + level);
+    const b = load(bestKey());
     $('best').textContent = b ? `Best: ${b}s` : '';
   }
 
@@ -227,8 +273,8 @@
       const secs = Math.max(1, Math.round((Date.now() - t0) / 1000));
       timerEl.textContent = lcd(secs);
       faceEl.textContent = '😎';
-      const best = +load('best.' + level) || Infinity;
-      if (secs < best) { save('best.' + level, secs); msgEl.textContent = `Cleared in ${secs}s — new best!`; }
+      const best = +load(bestKey()) || Infinity;
+      if (secs < best) { save(bestKey(), secs); msgEl.textContent = `Cleared in ${secs}s — new best!`; }
       else msgEl.textContent = `Cleared in ${secs}s.`;
       showBest();
     }
@@ -274,9 +320,37 @@
   menu.addEventListener('click', (e) => {
     const d = e.target.closest('div');
     if (!d) return;
+    if (d.dataset.act === 'custom') { openCustom(); return; }
     if (d.dataset.level) { level = d.dataset.level; save('level', level); }
     newGame();
   });
+  const bg = $('customBg'), cW = $('cW'), cH = $('cH'), cF = $('cF');
+  function customHint() {
+    const L = Minus.customLevel(cW.value, cH.value, cF.value);
+    $('cHint').textContent = `${L.w}×${L.h}: ${L.free} free, ${L.w * L.h - L.free} mines. Free cells 9–${L.w * L.h - 1}.`;
+  }
+  function openCustom() {
+    const L = LEVELS.custom;
+    cW.value = L.w; cH.value = L.h; cF.value = L.free;
+    customHint();
+    bg.classList.add('open');
+    cH.focus(); cH.select();
+  }
+  const closeCustom = () => bg.classList.remove('open');
+  [cW, cH, cF].forEach((el) => el.addEventListener('input', customHint));
+  $('customForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    LEVELS.custom = Minus.customLevel(cW.value, cH.value, cF.value);
+    save('custom', JSON.stringify(LEVELS.custom));
+    level = 'custom'; save('level', level);
+    closeCustom();
+    newGame();
+  });
+  $('customCancel').addEventListener('click', closeCustom);
+  $('customX').addEventListener('click', closeCustom);
+  bg.addEventListener('click', (e) => { if (e.target === bg) closeCustom(); });
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCustom(); });
+
   $('helpBtn').addEventListener('click', () => $('help').scrollIntoView({ behavior: 'smooth' }));
 
   newGame();
